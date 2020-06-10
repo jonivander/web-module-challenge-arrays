@@ -110,12 +110,15 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(/*code here*/){
-
-    /*code here*/
-
+function removeFlavorByName(arr, flav){
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] === flav){
+            arr.splice(i,1)
+        }
+    }
+    return arr
 }
-
+console.log(removeFlavorByName(originalFlavors, "Vanilla"))
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
